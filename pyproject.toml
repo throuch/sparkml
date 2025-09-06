@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sparkml"
+version = "0.1.0"
+description = "Spark job in Python"
+authors = [{ name = "Thomas Rouch" }]
+dependencies = [
+    "pyspark",
+    #"numpy==1.26.*",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+run-wordcount = "sparkml.jobs.wordcount:main"
