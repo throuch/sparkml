@@ -19,6 +19,6 @@ def test_create_df():
     logger.info("DataFrame créé avec %d lignes", df.count())
     assert df.count() == 2
 
-def test_wordcount():
-    df =wordcount(get_spark_session(), './resources/sample.txt')
+def test_wordcount(spark):
+    df =wordcount(spark, './resources/sample.txt')
     df.show()
